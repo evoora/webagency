@@ -1,0 +1,684 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000000;
+}
+@font-face {
+    font-family: '__GeistSans'; /* Use the font name you prefer */
+    src: url('fonts/Geist-v1.4.01/ttf/Geist-Bold.ttf') format('woff2'), /* Adjust the filename based on what you have */
+         url('fonts/Geist-v1.4.01/otf/Geist-Bold.otf') format('woff'),
+         url('fonts/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('truetype'); /* Include other formats if available */
+    font-weight: normal; /* Adjust based on the font style */
+    font-style: normal; /* Adjust based on the font style */
+}
+
+.navbar {
+    position: sticky; /* Change to sticky */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 15%;
+    margin: 0;
+    z-index: 15;
+    
+
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-appear {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly down */
+    transition: opacity 2s, transform 1.5s; /* Smooth transition */
+}
+
+.animate-on-appear.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo span { /* Targeting the title inside the logo */
+    font-family: 
+        'Inter', 
+        ui-sans-serif, 
+        system-ui, 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        'Segoe UI', 
+        'Roboto', 
+        'Helvetica Neue', 
+        'Arial', 
+        'Noto Sans', 
+        sans-serif, 
+        'Apple Color Emoji', 
+        'Segoe UI Emoji', 
+        'Segoe UI Symbol', 
+        'Noto Color Emoji';
+        font-size: 24px; /* Adjust the size as needed */
+        color: rgba(255, 255, 255, 0.9); /* White color with 80% opacity */
+        font-weight: bolder;
+    margin-left: 10px; /* Optional spacing */
+}
+
+.logo img {
+    margin-right: 5px; /* Space between logo and text */
+    width: 25px;
+    
+    
+}
+.logo img:hover{
+   
+    transform: rotate(180deg) scale(1.2); /* Slightly tilt the logo */
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.nav-links li {
+    color: grey; /* Greyish text */
+    font-family: '__GeistSans', sans-serif; /* Use Geist Sans */
+    list-style: none; /* Remove default list styles if needed */
+    margin: 0 10px; /* Optional margin for spacing */
+    font-size: 14px;
+}
+.nav-links li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (li) */
+    display: block; /* Makes the entire area clickable */
+  
+}
+.nav-links a:hover {
+    color: white;
+    transition: 0.15s ease-in;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-content {
+    background-color: #000000; /* Dark background */
+    background-image:  linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px), /* Dimmer vertical grid */
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px); /* Dimmer horizontal grid */
+    background-size: 33px 33px; /* Adjust grid size */
+    padding: 20px;
+    
+
+    
+}
+
+
+.heading-container {
+    margin: 0 auto;
+    padding: 15vh 0px; /* Add padding for spacing */
+    position: relative; /* Position for the spotlight */
+    width: 50%;
+    
+   
+}
+
+.main-heading {
+    font-family: '__GeistSans', sans-serif; /* Use your custom font */
+    font-size: 4rem; /* Main heading size */
+    color: #ffffff; /* Dark color for the main heading */
+    margin: 0 0 10px; /* Margin below the heading */
+    position: relative; /* For spotlight effect */
+    z-index: 2; /* Ensure it stays above the spotlight */
+}
+
+
+
+.sub-heading {
+    font-size: 1.75em; /* Subheading size */
+    color: rgb(212 212 216);
+    margin: 10px 0; /* Margin around subheading */
+}
+
+.description {
+    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    color: rgb(196, 196, 196);
+        line-height: 1.75rem;
+}
+
+.call-to-action {
+    margin-top: 20px; /* Spacing above the call to action */
+}
+
+.cta-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Button text size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.tech-stack {
+    font-size: 18px; /* Font size */
+    color: #888; /* Text color */
+    text-align: left; /* Center alignment */
+    margin: 50px 0; /* Margin for spacing */
+    margin-right: 25px;
+    
+}
+
+.tech-stack i {
+    margin-right: 1px ; /* Space between icons and text */
+    margin-left: 25px;
+    color: #333; /* Icon color */
+    vertical-align: left; /* Align icons with text */
+}
+.tech-stack i:nth-child(1) {
+    margin-left: 0;
+}
+
+.animated-word {
+    display: inline-block; /* Allows for animation */
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease-in; /* Smooth transition */
+}
+
+.fade-in {
+    opacity: 1; /* Fade in */
+}
+
+.button-container {
+    display: flex; /* Align buttons in a row */
+    justify-content: left; /* Center the buttons */
+    margin-top: 40px; /* Space above the buttons */
+    font-family: '__GeistSans';
+    
+}
+
+.btn {
+    text-decoration: none; /* Remove underline from links */
+    padding: 15px 20px; /* Padding for buttons */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0; /* Space between buttons */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-size: 14px;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition for background color, text color, and transform */
+}
+
+.white-btn {
+    background-color: white; /* Background color for the black button */
+    color: black; /* Text color */
+    border-radius: 10px; /* More rounded corners */
+}
+
+.black-btn {
+    background-color: rgb(0, 0, 0); /* Background color for the black button */
+    color: rgb(255, 255, 255); /* Text color */
+    border-radius: 10px; /* More rounded corners */
+    border: 1px solid rgb(77, 77, 77);
+}
+
+/* Hover effects */
+.white-btn:hover {
+    transform: scale(1.02); /* Scale up slightly */
+    
+}
+
+.black-btn:hover {
+    transform: scale(1.02); /* Scale up slightly */
+}
+
+.spotlight {
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    width: 70vw; 
+    height: 80vh; 
+    background: rgba(255, 255, 255, 0.045); 
+    opacity: 0; 
+    animation: spotlight 2s ease .75s forwards; 
+    pointer-events: none; 
+    clip-path: polygon(0 0, 100% 50%, 50% 100%, 93% 52%);
+
+
+    z-index: 12;
+
+    /* Adding box shadow for shiny effect */
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.062), /* Adjusting to be more noticeable */
+                0 0 60px rgba(255, 255, 255, 0.089); /* More diffused glow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the shadow */
+    
+}
+
+@keyframes spotlight {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.chat-icon {
+    position: fixed; /* Fixed positioning */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #0f0f0fb7; /* Background color */
+    color: rgb(255, 255, 255); /* Icon color */
+    border-radius: 30%; /* Circular shape */
+    width: 50px; /* Width of the icon container */
+    height: 50px; /* Height of the icon container */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center icon horizontally */
+    align-items: center; /* Center icon vertically */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.chat-icon:hover {
+    background-color: #ffffff; /* Darker background on hover */
+    color: #181818;
+}
+
+.chat-icon i {
+    font-size: 20px; /* Size of the icon */
+}
+
+
+.layout {
+    border-top: 1px solid rgba(255, 255, 255, 0.041);
+    box-shadow: 0px -10px 10px -5px rgba(153, 0, 255, 0.068);
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    padding: 0 12%;
+    margin-bottom: 5%;
+}
+
+.left-side {
+    flex: 1;
+    margin-top: 5%;
+}
+
+.right-side {
+    flex: 1;
+    background-color: hsla(0, 0%, 100%, 0.015); /* Background color for card */
+    border: 0.1px solid rgba(255, 255, 255, 0.014);
+    color: #ffffff; /* Text color */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 10%;
+
+    
+    
+    
+}
+
+.bold-header {
+    
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: '__GeistSans', sans-serif;
+    margin-bottom: 10px;
+}
+.pinkp {
+    background: linear-gradient(90deg, #5e4cff, #ff97ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 1rem;
+    color: rgb(196, 196, 196);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 30px;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 15px;
+    position: relative; /* Enables positioning for the pseudo-element */
+    z-index: 1;
+}
+
+.card-container::before {
+    content: "";
+    position: absolute;
+    transform: translate(-10%, -100%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 36, 255, 0.055), rgba(46, 31, 255, 0.137));
+    filter: blur(60px);
+    z-index: -1; /* Keeps it behind the cards */
+    border-radius: 20px;
+    width: 700px; /* Adjust to control the glow spread */
+    height: 200px;
+}
+
+.mini-card {
+    background-color: hsla(0, 0%, 100%, 0.007); /* Background color for card */
+    border: 0.1px solid rgba(255, 255, 255, 0.014);
+    color: #ffffff; /* Text color */
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: flex;
+}
+
+.mini-card i {
+    color: #b0b0b0; /* Grey icon color */
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.mini-card h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+.mini-card:hover {
+    background-color: hsla(0, 0%, 100%, 0.007); /* Background color for card */
+    transform: translateY(-3px) scale(1.01); /* Subtle upward lift and enlarge */
+    box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.171); /* Soft shadow */
+}
+
+.mini-card.active {
+    border: 1px solid #5e4cff; /* Activated border color */
+    box-shadow: 0px 0px 10px rgba(94, 76, 255, 0.5); /* Subtle glow */
+    transform: scale(1.02); /* Slightly larger */
+}
+
+
+.right-side h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+#detail-text {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(196, 196, 196);
+    font-family: 'Inter', sans-serif;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.testimonial-section {
+    color: #fff;
+    text-align: center;
+    padding: 20px 15%;
+
+    align-items: center;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 10px 20px; /* row-gap column gap */
+    row-gap: 10px;
+    column-gap: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: scrollUp 20s linear infinite;
+    margin: auto;
+}
+
+.testimonial-row.faster {
+    animation-duration: 35s; /* Faster speed for the middle row */
+}
+
+.testimonial-card {
+    display: flex;
+    align-items: flex-start; /* Align items to start to move avatar closer to the top */
+    background: #0f0f0f;
+    padding: 8px 12px; /* Reduced padding */
+    margin-bottom: 35px;
+    margin-right: 30px;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.082);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    position: relative;
+    
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: flex-start; /* Align avatar to the top of the card */
+    margin-right: 10px; /* Space between avatar and text */
+    padding-top: 15px;
+}
+
+.testimonial-content {
+    text-align: left;
+    padding-top: 15px;
+    
+}
+
+.username {
+    
+    font-weight: bold;
+    color: #fff;
+    margin: 0; /* Remove extra margin */
+}
+
+.handle {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 2px; /* Minimal margin for spacing */
+}
+
+.comment {
+    color: #eee;
+    font-size: 1rem;
+    margin-top: 4px; /* Small margin for spacing */
+    text-align: left;
+}
+
+.twitter-icon {
+    color: #1DA1F2;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+/* Animation for scrolling effect */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+
+.cta-section {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta-section h1 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family:'Inter';
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    color: #ffffff; /* SparkMedia blue color */
+    margin-bottom: 20px;
+    
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons .btn-black,
+.cta-buttons .btn-white {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid white;
+}
+
+.btn-black:hover {
+    transform: translateY(-1px) scale(1.01); /* Subtle upward lift and enlarge */
+    box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.171); /* Soft shadow */
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #000;
+    border: none;
+}
+
+.btn-white:hover {
+    transform: translateY(-1px) scale(1.01); /* Subtle upward lift and enlarge */
+    box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.171); /* Soft shadow */
+}
+
+
+  /* Smooth Reveal Effect */
+#typewriter-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Start width at 0 */
+    color: #ffffff; /* SparkMedia blue color */
+  }
+  
+/* Keyframes for smooth reveal */
+@keyframes smoothReveal {
+    to {
+        width: 100%; /* Animate to full width */
+    }
+}
+
+/* Class to trigger animation */
+.reveal {
+    animation: smoothReveal 6s ease forwards; /* Adjust timing as needed */
+}
+
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start */
+    padding: 0 15%;
+    background-color: #000000; /* Background color */
+    color: #fff; /* Text color */
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+}
+.footer-left {
+    max-width: 300px; /* Optional: Limit width */
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center; /* Aligns logo and text vertically */
+    margin-bottom: 10px; /* Space between logo + text and paragraph */
+}
+
+.logofooter {
+    margin-right: 8px; /* Space between logo and SparkMedia text */
+    width: 25px;
+}
+
+.footerspan {
+    margin: 0;
+    padding: 0;
+    font-size: 18px; /* Adjust font size if needed */
+    font-weight: bold; /* Adjust font weight for emphasis */
+}
+.footer-right {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+.footer-column {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 25px;
+}
+
+.footer-column li {
+    margin-bottom: 15px; /* Space between list items */
+    color: grey; /* Greyish text */
+   
+    
+}
+
+.footer-column a {
+    color: grey;
+    text-decoration: none;
+    font-family: '__GeistSans', sans-serif; /* Use Geist Sans */
+    font-size: 15px;
+}
+.footer-column a:hover {
+    color: white;
+}
+
+.logofooter {
+    margin-right: 5px; /* Space between logo and text */
+    width: 25px;
+}
