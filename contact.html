@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPro</title>
+    <link rel="stylesheet" href="stylecontact.css"> <!-- Link to your CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+
+
+
+
+</head>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="imgs/logo6.png" alt="Logo">
+        <span id="index">BrightSite</span>
+        <ul class="nav-links">
+            <li><a href="#components">Services</a></li>
+            <li><a href="#templates">Pricing</a></li>
+            <li><a href="#pricing">Portfolio</a></li>
+        </ul>
+    </div>
+    <div class="social-media">
+        <ul class="nav-links">
+            <li><a href="#discord">Discord</a></li>
+            <li><a href="#twitter">Twitter</a></li>
+        </ul>
+        <div class="logo"><img src="imgs/sun-eclipse_16273943.png" alt="Logo"></div>
+    </div>
+</nav>
+
+<div class="contact-us-container">
+    <div class="contact-us-left">
+        <h1>Let's Get In Touch</h1>
+        <h2>What's the vision for your business online?<br>
+             <p class="disclaimer">If you want to see an example of good input, <a class="pinkp" href="">click here.</a> </h2>
+    </div>
+    <div class="contact-us-right">
+        <form class="contact-form">
+            <h1>Full Name</h1>
+            <div class="input-field">
+                <input type="text" placeholder="Enter your full name" />
+            </div>
+            <h1>Email Address</h1>
+            <div class="input-field">
+                <input type="email" id="emailInput" placeholder="Enter your email address" />
+            </div>
+            <h1>What do we launch into the online world? :)</h1>
+            <div class="input-field">
+                <textarea placeholder="Enter your message"></textarea>
+            </div>
+            <div class="input-field checkbox">
+                <input type="checkbox" id="policyCheck" />
+                <label for="policyCheck">I hereby agree to our Privacy Policy terms. </label>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-left">
+        <div class="footer-brand">
+            <img class="logofooter" src="imgs/logo6.png" alt="Logo">
+            <span class="footerspan">BrightSite</span>
+        </div>
+        <p>A product by <span class="pinkp">BrightSite</span></p>
+        <p>Building in public at <span class="pinkp"><a href="https://twitter.com/BrightSite">@brightsite</a></span></p>
+    </div>
+    <div class="footer-right">
+        <ul class="footer-column">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <ul class="footer-column">
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <ul class="footer-column">
+            <li><a href="#">E-mail Contact</a></li>
+            <li><a href="#">Instant Chat</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+    document.getElementById('index').addEventListener('click', function () {
+        window.location.href = 'index.html'; // Redirects to index.html
+    });
+</script>
+<script>
+window.addEventListener('load', function() {
+    // Remove and reset the animation classes
+    document.body.classList.remove('fade-slide-in', 'visible');
+    
+    // Force a reflow/repaint to make sure browser applies changes
+    
+    
+    // Trigger animation after a short delay
+    setTimeout(function() {
+        document.body.classList.add('fade-slide-in');
+        document.body.classList.add('visible');
+    }, 0);
+});
+</script>
+</body>
+</html>

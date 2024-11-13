@@ -1,0 +1,385 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000000;
+    min-height: 100vh;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Define a fade-slide animation using keyframes */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.fade-slide-in {
+    animation: fadeSlideIn 1.5s ease-out;
+}
+
+.fade-slide-out {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+@font-face {
+    font-family: '__GeistSans'; /* Use the font name you prefer */
+    src: url('fonts/Geist-v1.4.01/ttf/Geist-Bold.ttf') format('woff2'), /* Adjust the filename based on what you have */
+         url('fonts/Geist-v1.4.01/otf/Geist-Bold.otf') format('woff'),
+         url('fonts/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('truetype'); /* Include other formats if available */
+    font-weight: normal; /* Adjust based on the font style */
+    font-style: normal; /* Adjust based on the font style */
+}
+@font-face {
+    font-family: '__GeistSans'; /* Use the font name you prefer */
+    src: url('fonts/Geist-v1.4.01/ttf/Geist-Bold.ttf') format('woff2'), /* Adjust the filename based on what you have */
+         url('fonts/Geist-v1.4.01/otf/Geist-Bold.otf') format('woff'),
+         url('fonts/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('truetype'); /* Include other formats if available */
+    font-weight: normal; /* Adjust based on the font style */
+    font-style: normal; /* Adjust based on the font style */
+}
+
+.navbar {
+    position: sticky; /* Change to sticky */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 15%;
+    margin: 0;
+    z-index: 15;
+    
+
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-appear {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly down */
+    transition: opacity 2s, transform 1.5s; /* Smooth transition */
+}
+
+.animate-on-appear.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo span { /* Targeting the title inside the logo */
+    font-family: 
+        'Inter', 
+        ui-sans-serif, 
+        system-ui, 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        'Segoe UI', 
+        'Roboto', 
+        'Helvetica Neue', 
+        'Arial', 
+        'Noto Sans', 
+        sans-serif, 
+        'Apple Color Emoji', 
+        'Segoe UI Emoji', 
+        'Segoe UI Symbol', 
+        'Noto Color Emoji';
+        font-size: 24px; /* Adjust the size as needed */
+        color: rgba(255, 255, 255, 0.9); /* White color with 80% opacity */
+        font-weight: bolder;
+    margin-left: 10px; /* Optional spacing */
+}
+
+.logo img {
+    margin-right: 5px; /* Space between logo and text */
+    width: 30px;
+    
+    
+    
+    
+}
+.logo img:hover{
+   
+    transform: rotate(360deg) scale(1.02); /* Slightly tilt the logo */
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.nav-links li {
+    color: grey; /* Greyish text */
+    font-family: '__GeistSans', sans-serif; /* Use Geist Sans */
+    list-style: none; /* Remove default list styles if needed */
+    margin: 0 10px; /* Optional margin for spacing */
+    font-size: 14px;
+}
+.nav-links li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (li) */
+    display: block; /* Makes the entire area clickable */
+  
+}
+.nav-links a:hover {
+    color: white;
+    transition: 0.15s ease-in;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.contact-us-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(to top right, #0a178ffd 0%, #000000 50%, #111111 100%);
+    
+    color: white;
+}
+
+.contact-us-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20%;
+    padding-right: 20px;
+    padding: 0 10%;
+    
+    
+}
+
+.contact-us-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    
+    
+    
+    
+}
+
+.contact-us-left h2 {
+    font-size: 1.2rem;
+    font-family: 'Inter';
+    font-weight: lighter;
+    margin: 0;
+}
+.contact-us-left p {
+    color: #ffffff;
+    display: inline;
+}
+
+.contact-us-left a {
+    color: #1a7bbc;
+    text-decoration: none;
+}
+
+.contact-us-right {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    padding: 0 10%;
+    
+    
+}
+
+.contact-form h1 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-weight: lighter;
+    color: aliceblue;
+}
+
+.input-field {
+    margin-bottom: 15px;
+   
+    
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(24, 24, 24);
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+.input-field textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+#policyCheck {
+    display: flex;
+    align-items: left;
+    width: 5%;
+}
+.checkbox input {
+    margin-right: 10px;
+ 
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0a178f69;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0a178ffd;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-us-container {
+        flex-direction: column;
+    }
+
+    .contact-us-left,
+    .contact-us-right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-us-left h1 {
+        font-size: 2rem;
+    }
+}
+
+#index {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pinkp {
+    background: linear-gradient(90deg, #5e4cff, #ff97ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start */
+    padding: 0 15%;
+    background-color: #000000; /* Background color */
+    color: #fff; /* Text color */
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+}
+.footer-left {
+    max-width: 300px; /* Optional: Limit width */
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center; /* Aligns logo and text vertically */
+    margin-bottom: 10px; /* Space between logo + text and paragraph */
+}
+
+.logofooter {
+    margin-right: 8px; /* Space between logo and SparkMedia text */
+    width: 25px;
+}
+
+.footerspan {
+    margin: 0;
+    padding: 0;
+    font-size: 18px; /* Adjust font size if needed */
+    font-weight: bold; /* Adjust font weight for emphasis */
+}
+.footer-right {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+.footer-column {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 25px;
+}
+
+.footer-column li {
+    margin-bottom: 15px; /* Space between list items */
+    color: grey; /* Greyish text */
+   
+    
+}
+
+.footer-column a {
+    color: grey;
+    text-decoration: none;
+    font-family: '__GeistSans', sans-serif; /* Use Geist Sans */
+    font-size: 15px;
+}
+.footer-column a:hover {
+    color: white;
+}
+
+.logofooter {
+    margin-right: 5px; /* Space between logo and text */
+    width: 25px;
+}

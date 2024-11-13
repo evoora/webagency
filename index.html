@@ -19,18 +19,21 @@
 
 </head>
 <body>
+    <div id="notification" class="notification">
+        <p>Pricing varies based on the scope of the project. Contact us for further information!</p>
+    </div>
     <div class="chat-icon">
         <i class="fas fa-comments"></i> <!-- Font Awesome chat icon -->
     </div>
     <nav class="navbar">
         <div class="logo">
             <!-- Logo Icon Here -->
-            <img src="imgs/logo-dark.webp" alt="Logo">
-            <span>SparkMedia</span>
+            <img src="imgs/logo6.png" alt="Logo">
+            <span>BrightSite</span>
             <ul class="nav-links">
-                <li><a href="#components">Services</a></li>
                 <li><a href="#templates">Pricing</a></li>
                 <li><a href="#pricing">Portfolio</a></li>
+                <li><a href="#components">FAQ</a></li>
             </ul>
         </div>
         <div class="social-media">
@@ -50,8 +53,8 @@
             <h1 class="main-heading ">Step into the Digital World with Your <span class="animated-word" id="animatedWord"></span></h1>
             <p class="description">We will create your website from the ground up, integrating sophisticated features, top-notch hosting, and tailored SEO services ready to elevate your brand.</p>
             <div class="button-container">
-                <a href="#" class="btn white-btn">Explore Services</a>
-                <a href="#" class="btn black-btn">Contact Us</a>
+                <a href="#" class="btn white-btn" id="explore-btn">Explore Services</a>
+                <a href="contact.html" class="btn black-btn" id="contact-link">Contact Us</a>
             </div>
             <p class="tech-stack animate__animated animate__fadeInUp">
                 <i class="fab fa-html5"></i> HTML 
@@ -64,142 +67,141 @@
            
         </main>
         
-        <div class="layout">
-            <div class="left-side">
-                <h1 class="bold-header animate-on-appear">Website Creation, Simplified: <br><span class="pinkp">Blueprint to Breakthrough</span></h1>
-                <p class="description animate-on-appear">Explore our step-by-step process that brings your vision to life.</p>
-                
-                <div class="card-container">
-                    <div class="mini-card animate-on-appear" onclick="showDetail(1)">
-                        <i class="fas fa-handshake"></i> <!-- Handshake icon for Consultation -->
-                        <h3>Consultation</h3>
-                    </div>
-                    <div class="mini-card animate-on-appear" onclick="showDetail(2)">
-                        <i class="fas fa-chart-bar"></i> <!-- Bar chart icon for Planning -->
-                        <h3>Planning</h3>
-                    </div>
-                    <div class="mini-card animate-on-appear" onclick="showDetail(3)">
-                        <i class="fas fa-paint-brush"></i> <!-- Paint brush icon for Design -->
-                        <h3>Design</h3>
-                    </div>
-                    <div class="mini-card animate-on-appear" onclick="showDetail(4)">
-                        <i class="fas fa-laptop"></i> <!-- Laptop icon for Development -->
-                        <h3>Development</h3>
-                    </div>
-                    <div class="mini-card animate-on-appear" onclick="showDetail(6)">
-                        <i class="fas fa-rocket"></i> <!-- Rocket icon for Delivery -->
-                        <h3>Delivery</h3>
-                    </div>
-                    <div class="mini-card animate-on-appear" onclick="showDetail(7)">
-                        <i class="fas fa-cog"></i> <!-- Gear icon for Maintenance -->
-                        <h3>Maintenance</h3>
-                    </div>
-                </div>
-            </div>
+       <div class="layout">
+    <div class="left-side" id="services-section">
+        <h1 class="bold-header animate-on-appear">Website Creation, Simplified: <br><span class="pinkp">Blueprint to Breakthrough</span></h1>
+        <p class="description animate-on-appear">Explore our step-by-step process that brings your vision to life.</p>
         
-            <div class="right-side">
-                <div id="detail-box" class="animate-on-appear">
-                    <h2>How its done?</h2>
-                    <p id="detail-text">Choose a service to see more details.</p>
-                </div>
+        <div class="card-container">
+            <div class="mini-card animate-on-appear" onclick="showDetail(1)">
+                <i class="fas fa-comments"></i> <!-- Comments icon for Consultation -->
+                <h3>Consultation</h3>
+            </div>
+            <div class="mini-card animate-on-appear" onclick="showDetail(2)">
+                <i class="fas fa-chart-bar"></i> <!-- Bar chart icon for Planning -->
+                <h3>Planning</h3>
+            </div>
+            <div class="mini-card animate-on-appear" onclick="showDetail(3)">
+                <i class="fas fa-paint-brush"></i> <!-- Paint brush icon for Design -->
+                <h3>Design</h3>
+            </div>
+            <div class="mini-card animate-on-appear" onclick="showDetail(4)">
+                <i class="fas fa-laptop"></i> <!-- Laptop icon for Development -->
+                <h3>Development</h3>
+            </div>
+            <div class="mini-card animate-on-appear" onclick="showDetail(5)">
+                <i class="fas fa-rocket"></i> <!-- Rocket icon for Delivery -->
+                <h3>Delivery</h3>
+            </div>
+            <div class="mini-card animate-on-appear" onclick="showDetail(6)">
+                <i class="fas fa-cog"></i> <!-- Gear icon for Maintenance -->
+                <h3>Maintenance</h3>
             </div>
         </div>
-<!-- Testimonial Section -->
-<div class="testimonial-section">
-    <h2>Loved by our clients</h2>
-    <p>Here's what some of our users have to say about SparkMedia.</p>
-    
-    <div class="testimonial-container">
-        <div class="testimonial-row" id="row-1">
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=1" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Ajay</p>
-                    <p class="handle">@ajayvignesh01</p>
-                    <p class="comment">Wow, this is awesome! I'm beyond impressed with the results.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=2" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Chris</p>
-                    <p class="handle">@chris_dev</p>
-                    <p class="comment">Impressive work! They know what they’re doing.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=3" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Emily</p>
-                    <p class="handle">@emily_writer</p>
-                    <p class="comment">SparkMedia has truly transformed our online presence. From the initial planning to the final product, it has been a smooth journey!</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=4" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">John</p>
-                    <p class="handle">@john_doe</p>
-                    <p class="comment">Great support team! I had a few questions, and they answered promptly and thoroughly.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=5" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Sophie</p>
-                    <p class="handle">@sophie_art</p>
-                    <p class="comment">Beautifully designed. My website looks fantastic and works perfectly across all devices.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=1" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Ajay</p>
-                    <p class="handle">@ajayvignesh01</p>
-                    <p class="comment">Wow, this is awesome! I'm beyond impressed with the results.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=2" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Chris</p>
-                    <p class="handle">@chris_dev</p>
-                    <p class="comment">Impressive work! They know what they’re doing.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=3" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Emily</p>
-                    <p class="handle">@emily_writer</p>
-                    <p class="comment">SparkMedia has truly transformed our online presence. From the initial planning to the final product, it has been a smooth journey!</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=4" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">John</p>
-                    <p class="handle">@john_doe</p>
-                    <p class="comment">Great support team! I had a few questions, and they answered promptly and thoroughly.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/50?img=5" alt="Avatar" class="avatar">
-                <div class="testimonial-content">
-                    <p class="username">Sophie</p>
-                    <p class="handle">@sophie_art</p>
-                    <p class="comment">Beautifully designed. My website looks fantastic and works perfectly across all devices.</p>
-                </div>
-                <i class="fab fa-twitter twitter-icon"></i>
+    </div>
+
+    <div class="right-side">
+        <div id="detail-box" class="animate-on-appear">
+            <h2>How It's Done</h2>
+            <p id="detail-text">Choose a service to see more details.</p>
+        </div>
+    </div>
+</div>
+        <div class="testimonial-section">
+            <h2>Loved by our clients</h2>
+            <p>Here's what some of our users have to say about BrightSite.</p>
+            
+            <div class="testimonial-container">
+                <div class="testimonial-row" id="row-1">
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=1" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Ajay</p>
+                            <p class="handle">@ajayvignesh01</p>
+                            <p class="comment">Wow, this is awesome! I'm beyond impressed with the results.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=2" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Chris</p>
+                            <p class="handle">@chris_dev</p>
+                            <p class="comment">Impressive work! They know what they’re doing.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=3" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Emily</p>
+                            <p class="handle">@emily_writer</p>
+                            <p class="comment">BrightSite has truly transformed our online presence. From the initial planning to the final product, it has been a smooth journey!</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=4" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">John</p>
+                            <p class="handle">@john_doe</p>
+                            <p class="comment">Great support team! I had a few questions, and they answered promptly and thoroughly.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=5" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Sophie</p>
+                            <p class="handle">@sophie_art</p>
+                            <p class="comment">Beautifully designed. My website looks fantastic and works perfectly across all devices.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=1" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Ajay</p>
+                            <p class="handle">@ajayvignesh01</p>
+                            <p class="comment">Wow, this is awesome! I'm beyond impressed with the results.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=2" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Chris</p>
+                            <p class="handle">@chris_dev</p>
+                            <p class="comment">Impressive work! They know what they’re doing.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=3" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Emily</p>
+                            <p class="handle">@emily_writer</p>
+                            <p class="comment">BrightSite has truly transformed our online presence. From the initial planning to the final product, it has been a smooth journey!</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=4" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">John</p>
+                            <p class="handle">@john_doe</p>
+                            <p class="comment">Great support team! I had a few questions, and they answered promptly and thoroughly.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/50?img=5" alt="Avatar" class="avatar">
+                        <div class="testimonial-content">
+                            <p class="username">Sophie</p>
+                            <p class="handle">@sophie_art</p>
+                            <p class="comment">Beautifully designed. My website looks fantastic and works perfectly across all devices.</p>
+                        </div>
+                        <i class="fab fa-twitter twitter-icon"></i>
             </div>
         </div>
 
@@ -209,7 +211,7 @@
                 <div class="testimonial-content">
                     <p class="username">Lisa</p>
                     <p class="handle">@lisa_design</p>
-                    <p class="comment">Fantastic experience! SparkMedia took my ideas and made them real. They pay attention to every detail.</p>
+                    <p class="comment">Fantastic experience! BrightSite took my ideas and made them real. They pay attention to every detail.</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -218,7 +220,7 @@
                 <div class="testimonial-content">
                     <p class="username">Mark</p>
                     <p class="handle">@marktech</p>
-                    <p class="comment">Highly recommend SparkMedia for their commitment to quality and professionalism. They made our vision come to life!</p>
+                    <p class="comment">Highly recommend BrightSite for their commitment to quality and professionalism. They made our vision come to life!</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -245,7 +247,7 @@
                 <div class="testimonial-content">
                     <p class="username">Nina</p>
                     <p class="handle">@nina_creative</p>
-                    <p class="comment">The best in the business! SparkMedia exceeded all my expectations. My website stands out like never before.</p>
+                    <p class="comment">The best in the business! BrightSite exceeded all my expectations. My website stands out like never before.</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -254,7 +256,7 @@
                 <div class="testimonial-content">
                     <p class="username">Lisa</p>
                     <p class="handle">@lisa_design</p>
-                    <p class="comment">Fantastic experience! SparkMedia took my ideas and made them real. They pay attention to every detail.</p>
+                    <p class="comment">Fantastic experience! BrightSite took my ideas and made them real. They pay attention to every detail.</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -263,7 +265,7 @@
                 <div class="testimonial-content">
                     <p class="username">Mark</p>
                     <p class="handle">@marktech</p>
-                    <p class="comment">Highly recommend SparkMedia for their commitment to quality and professionalism. They made our vision come to life!</p>
+                    <p class="comment">Highly recommend BrightSite for their commitment to quality and professionalism. They made our vision come to life!</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -290,7 +292,7 @@
                 <div class="testimonial-content">
                     <p class="username">Nina</p>
                     <p class="handle">@nina_creative</p>
-                    <p class="comment">The best in the business! SparkMedia exceeded all my expectations. My website stands out like never before.</p>
+                    <p class="comment">The best in the business! BrightSite exceeded all my expectations. My website stands out like never before.</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -329,7 +331,7 @@
                 <div class="testimonial-content">
                     <p class="username">Robert</p>
                     <p class="handle">@robert_dev</p>
-                    <p class="comment">Professional, creative, and reliable. A+ for SparkMedia!</p>
+                    <p class="comment">Professional, creative, and reliable. A+ for BrightSite!</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -338,7 +340,7 @@
                 <div class="testimonial-content">
                     <p class="username">Ellie</p>
                     <p class="handle">@ellie_inspire</p>
-                    <p class="comment">SparkMedia has been a blessing to our company. From branding to website design, they took care of it all.</p>
+                    <p class="comment">BrightSite has been a blessing to our company. From branding to website design, they took care of it all.</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -374,7 +376,7 @@
                 <div class="testimonial-content">
                     <p class="username">Robert</p>
                     <p class="handle">@robert_dev</p>
-                    <p class="comment">Professional, creative, and reliable. A+ for SparkMedia!</p>
+                    <p class="comment">Professional, creative, and reliable. A+ for BrightSite!</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -383,7 +385,7 @@
                 <div class="testimonial-content">
                     <p class="username">Ellie</p>
                     <p class="handle">@ellie_inspire</p>
-                    <p class="comment">SparkMedia has been a blessing to our company. From branding to website design, they took care of it all.</p>
+                    <p class="comment">BrightSite has been a blessing to our company. From branding to website design, they took care of it all.</p>
                 </div>
                 <i class="fab fa-twitter twitter-icon"></i>
             </div>
@@ -393,25 +395,25 @@
 
 <div class="cta-section">
    <h1>The road to freedom starts from here</h1>
-   <h2 id="typewriter-text">Build awesome apps with <span class="pinkp">SparkMedia.</span></h2>
-  <div class="cta-buttons">
-  <button class="btn-black">Contact Us</button>
-  <button class="btn-white">FAQ</button>
-</div >
+   <h2 id="typewriter-text">Build awesome apps with <span class="pinkp">BrightSite.</span></h2>
+   <div class="cta-buttons">
+    <button class="btn-black" id="contactButton"><p id="ctabt">Contact Us</p></button>
+    <button class="btn-white"><p id="ctabt">FAQ</p></button>
+  </div>
     </div>
 </div>
+
 <footer class="footer">
     <div class="footer-left">
         <div class="footer-brand">
-            <img class="logofooter" src="imgs/logo-dark.webp" alt="Logo">
-            <span class="footerspan">SparkMedia</span>
+            <img class="logofooter" src="imgs/logo6.png" alt="Logo">
+            <span class="footerspan">BrightSite</span>
         </div>
-        <p>A product by <span class="pinkp">SparkMedia</span></p>
-        <p>Building in public at <span class="pinkp"><a href="https://twitter.com/sparkmedia">@sparkmedia</a></span></p>
+        <p>A product by <span class="pinkp">BrightSite</span></p>
+        <p>Building in public at <span class="pinkp"><a href="https://twitter.com/BrightSite">@brightsite</a></span></p>
     </div>
     <div class="footer-right">
         <ul class="footer-column">
-            <li><a href="#">Services</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">FAQ</a></li>
@@ -421,16 +423,23 @@
             <li><a href="#">Twitter</a></li>
         </ul>
         <ul class="footer-column">
-            <li><a href="#">E-mail Contact</a></li>
-            <li><a href="#">Instant Chat</a></li>
+            <li><a href="contact.html"id="contact-link">E-mail Contact</a></li>
+            <li><a href="contact.html"id="contact-link">Instant Chat</a></li>
         </ul>
     </div>
 </footer>
 <script>
+    // Get the button element
+const contactButton = document.getElementById('contactButton');
+
+// Add an event listener to handle the click event
+contactButton.addEventListener('click', function() {
+    // Redirect to the Contact Us page
+    window.location.href = 'contact.html';  // Replace 'contact.html' with your actual contact page URL
+});
 document.addEventListener("DOMContentLoaded", () => {
     const typewriterText = document.getElementById("typewriter-text");
-    const cursor = document.createElement("span"); // Create cursor element
-    cursor.classList.add("cursor"); // Add cursor class
+   
 
     // Create a function to handle the intersection
     const observer = new IntersectionObserver((entries) => {
@@ -442,11 +451,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Stop observing the element once the animation has triggered
                 observer.unobserve(entry.target);
 
-                // Start blinking cursor after animation ends
-                setTimeout(() => {
-                    typewriterText.appendChild(cursor); // Append the cursor after the animation
-                    cursor.style.opacity = '1'; // Make the cursor visible
-                }, 6000); // Delay for the length of the animation
             }
         });
     });
@@ -494,19 +498,32 @@ setTimeout(() => {
     </script>
 
     <script>
-        function showDetail(cardIndex) {
+   function showDetail(cardIndex) {
     const detailText = document.getElementById('detail-text');
+    const detailTitle = document.querySelector('#detail-box h2'); // Select the h2 element
     const details = [
-    "In-depth consultation to understand your vision and requirements.",
-    "Thorough research and planning to outline the project strategy.",
-    "Creative design process that brings your ideas to life through engaging visuals.",
-    "Development phase where your website is built with the latest technologies.",
-    "Final delivery of your website, ensuring everything is functioning perfectly.",
-    "Ongoing maintenance and support to keep your website updated and secure."
-];
+        "In-depth consultation to understand your vision and requirements.",
+        "Thorough research and planning to outline the project strategy.",
+        "Creative design process that brings your ideas to life through engaging visuals.",
+        "Development phase where your website is built with the latest technologies.",
+        "Final delivery of your website, ensuring everything is functioning perfectly.",
+        "Ongoing maintenance and support to keep your website updated and secure."
+    ];
+    const titles = [
+        "Consultation",
+        "Planning",
+        "Design",
+        "Development",
+        "Delivery",
+        "Maintenance"
+    ];
+
+    // Change the title to match the selected service
+    detailTitle.innerHTML = titles[cardIndex - 1]; 
+
+    // Change the description text
     detailText.innerHTML = details[cardIndex - 1];
 }
-
     </script>
     <script>
         const cards = document.querySelectorAll('.mini-card');
@@ -541,6 +558,59 @@ cards.forEach(card => {
             observer.observe(element); // Start observing each element
         });
     });
+</script>
+<script>
+document.getElementById('explore-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    
+    const targetElement = document.getElementById('services-section');
+    const elementStyles = window.getComputedStyle(targetElement);
+    const paddingBottom = parseFloat(elementStyles.paddingBottom);
+    const marginBottom = parseFloat(elementStyles.marginBottom);
+    
+    const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const viewportHeight = window.innerHeight;
+    
+    // Calculate total offset including padding and margin
+    const totalOffset = paddingBottom + marginBottom + 120; // The `20` can be adjusted for fine-tuning
+    
+    // Calculate the position to stop scrolling so that the bottom of the left-side is at the bottom of the screen with an offset
+    const scrollToPosition = offsetTop - (viewportHeight - targetElement.clientHeight) + totalOffset;
+    
+    window.scrollTo({
+        top: scrollToPosition,
+        behavior: 'smooth'
+    });
+});
+</script>
+<script>
+   document.getElementById('contact-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent immediate navigation
+
+    // Apply the fade-slide-out effect
+    document.body.classList.add('fade-slide-out');
+
+    // Navigate to the new page after the animation completes
+    setTimeout(function() {
+        window.location.href = 'contact.html';
+    }, 500); // Match the duration of the CSS transition
+});
+
+</script>
+<script>
+// Trigger the notification when the Pricing link is clicked
+document.querySelector('a[href="#templates"]').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior (scrolling to #templates)
+
+    // Show the notification
+    var notification = document.getElementById('notification');
+    notification.classList.add('visible');
+
+    // Hide the notification after 5 seconds
+    setTimeout(function() {
+        notification.classList.remove('visible');
+    }, 5000); // 5 seconds delay
+});
 </script>
 </body>
 </html>
