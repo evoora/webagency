@@ -185,7 +185,9 @@ body::-webkit-scrollbar {
     display: flex;
     
 }
-
+#index {
+    cursor: pointer;
+}
 .nav-links li {
     color: grey; /* Greyish text */
     font-family: '__GeistSans', sans-serif; /* Use Geist Sans */
@@ -209,204 +211,88 @@ body::-webkit-scrollbar {
     align-items: center;
     gap: 15px;
 }
-.contact-us-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background: linear-gradient(to top right, #0a178ffd 0%, #000000 50%, #111111 100%);
-    
-    color: white;
-}
 
-.contact-us-left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20%;
-    padding-right: 20px;
-    padding: 0 10%;
-    
-    
-}
 
-.contact-us-left h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    
-    
-    
-    
-}
 
-.contact-us-left h2 {
-    font-size: 1.2rem;
-    font-family: 'Inter';
-    font-weight: lighter;
+body {
     margin: 0;
-}
-.contact-us-left p {
-    color: #ffffff;
-    display: inline;
-}
-
-.contact-us-left a {
-    color: #1a7bbc;
-    text-decoration: none;
-}
-
-.contact-us-right {
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    padding: 0 10%;
-    
-    
-}
-
-.contact-form h1 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-family: 'Inter';
-    font-weight: lighter;
-    color: aliceblue;
-}
-
-.input-field {
-    margin-bottom: 15px;
-   
-    
-}
-
-.input-field input,
-.input-field textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 10px;
-    border: 1px solid rgb(24, 24, 24);
-    background-color: #0f0f0f;
-    color: #ffffff;
-}
-
-.input-field textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.checkbox {
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-#policyCheck {
-    display: flex;
-    align-items: left;
-    width: 5%;
-}
-.checkbox input {
-    margin-right: 10px;
- 
-}
-
-.submit-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #0a178f69;
+    font-family: Arial, sans-serif;
     color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background-color: #0a178ffd;
-}
-
-@media screen and (max-width: 768px) {
-    .contact-us-container {
-        flex-direction: column;
-    }
-
-    .contact-us-left,
-    .contact-us-right {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .contact-us-left h1 {
-        font-size: 2rem;
-    }
-}
-
-#index {
-    cursor: pointer;
+    background-color: #000000;
+    min-height: 100vh;
 }
 
 
-/* Initially, the example business description is invisible and doesn't take up space */
-.example-business {
-    visibility: hidden; /* Hide the element without taking up space */
-    height: 0; /* Ensure it takes no space */
-    padding: 0; /* Remove padding to avoid any space taken */
-    margin-top: 0; /* Remove margin to avoid extra space */
-    overflow: hidden; /* Hide any overflowing content */
-    transition: visibility 0s, height 0.7s ease-in-out, padding 0.7s ease-in-out; /* Smooth transition for visibility, height, and padding */
-    background-color: #ffffff0a;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
- 
+
+.faq {
+    width: 100%;
+    max-width: 900px; /* Slightly larger container */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
 }
 
-/* When the example is shown, restore normal visibility and space */
-.example-business.show {
-    visibility: visible; /* Make it visible */
-    height: auto; /* Allow the content to take its normal height */
-    width: auto;
-    padding: 15px; /* Add padding when shown */
-    margin-top: 20px; /* Add margin when shown */
-}
-
-.example-business h3 {
-    font-size: 22px;
+.faq h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: left;
     color: #ffffff;
+    font-weight: 600;
 }
 
-/* Paragraph styling */
-.example-business p {
-    font-size: 18px; /* Slightly larger text for easier reading */
-    color: #fff; /* White text for contrast */
-    font-family: "Inter", sans-serif;
-    letter-spacing: 0.5px; /* Slightly reduced letter-spacing for better readability */
-    line-height: 1.6; /* Increase line height for better text flow */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow to enhance readability */
+.faq-item {
+    margin-bottom: 15px;
 }
 
-/* Optional: Add spacing between paragraphs for better clarity */
-.example-business p + p {
-    margin-top: 10px;
+.faq-question {
+    width: 85%; /* Smaller than full width */
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-bottom: 0.1px solid #d1d1d144; /* Lighter bottom border */
+    display: flex;
+    transition: color 0.3s;
+
+    
+  
 }
-/* Styling for the explanation text */
-p.explanation {
-    font-size: 14px; /* Adjust font size */
-    color: #acacac; /* Color for the text */
-    font-family: "Inter", sans-serif; /* Font */
-    margin-top: 15px; /* Space above */
-    line-height: 1.6; /* Improve line spacing */
+
+.faq-question:hover {
+    color: #333; /* Darker text on hover */
 }
 
+.faq-icon {
+    font-size: 30px;
+    color: #007bff; /* Blue icon for + and - */
+    transition: transform 0.3s;
+    margin-right: 15px;
+}
 
+.faq-answer {
+    display: none;
+    padding: 10px 0;
+    color: #666;
+    font-size: 16px;
+    
+}
 
+.faq-answer p {
+    margin: 0;
+    padding: 0;
+}
 
+.faq-item.open .faq-answer {
+    display: block;
+}
 
-
-
-
-
-
-
-
-
+.faq-item.open .faq-icon {
+    transform: rotate(45deg); /* Rotate icon when open */
+    color: #007bff; /* Keep blue when open */
+}
 
 .pinkp {
     background: linear-gradient(90deg, #5e4cff, #ff97ff);

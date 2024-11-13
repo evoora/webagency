@@ -26,14 +26,16 @@ body::-webkit-scrollbar {
 }
 /* Notification container styles */
 .notification {
+    z-index: 1424;
+    font-family: 'Inter';
     position: fixed;
     top: -50px; /* Start off-screen */
     left: 50%;
     transform: translateX(-50%);
-    background-color: hsla(0, 0%, 100%, 0.042); /* Background color for card */
-    border: 0.1px solid rgba(255, 255, 255, 0.014);
+    background-color: hsl(0, 0%, 5%); /* Background color for card */
+    border: 0.1px solid rgba(255, 255, 255, 0.055);
     color: white;
-    padding: 15px;
+    padding: 20px 10px; /* Adds space inside the notification */
     font-size: 16px;
     text-align: center;
     border-radius: 5px;
@@ -42,12 +44,37 @@ body::-webkit-scrollbar {
     visibility: hidden; /* Make it not interactive when hidden */
     transition: opacity 0.5s ease, top 0.5s ease, visibility 0s linear 0.5s; /* Delay visibility until fade-out completes */
 }
+.notification p {
+    margin-bottom: 15px;
+}
 
 .notification.visible {
     opacity: 1; /* Make it visible */
     visibility: visible; /* Enable interaction */
     top: 10%; /* Slide into view */
     transition: opacity 1s ease, top 1s ease; /* No delay on visibility */
+}
+.contact-btn {
+    text-decoration: none; /* Remove underline from links */
+    padding: 12px 12px; /* Padding for buttons */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition for background color, text color, and transform */
+    z-index: 1424;
+    background-color: white; /* Background color for the black button */
+    color: black; /* Text color */
+    border-radius: 10px; /* More rounded corners */
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-btn:hover {
+    transform: scale(1.02);
+    transition: 0.5s ease-in;
 }
 .navbar {
     position: sticky; /* Change to sticky */

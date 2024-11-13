@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrightSite</title>
-    <link rel="stylesheet" href="stylecontact.css"> <!-- Link to your CSS -->
+    <link rel="stylesheet" href="styleFAQ.css"> <!-- Link to your CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -30,8 +30,8 @@
         <span id="index">BrightSite</span>
         <ul class="nav-links">
             <li><a href="#templates">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </div>
     <div class="social-media">
@@ -42,50 +42,67 @@
         <div class="logo"><img src="imgs/sun-eclipse_16273943.png" alt="Logo"></div>
     </div>
 </nav>
+<div id="notification" class="notification">
+    <p>Pricing varies based on the scope of the project. Contact us for further information!</p>
+    <a href="contact.html" class="contact-btn" >Contact Us</a>
+</div>
+<div class="faq">
+    <div id="h2container"><h2>Frequently Asked Questions</h2></div>
 
-<div class="contact-us-container">
-    <div class="contact-us-left">
-        <h1>Let's Get In Touch</h1>
-        <h2>What's the vision for your business online?<br>
-            <p class="disclaimer">If you want to see an example of good input, 
-                <a class="pinkp" href="javascript:void(0);" onclick="toggleExample()">click here.</a>
-            </p>
-        </h2>
-        <div id="example-business" class="example-business" >
-            <h3>For example, you could write: </h3>
-            
-            <p>
-                <strong>Business Name:</strong> ABC Web Design<br>
-                <strong>Services Needed:</strong> Website development, UI/UX design, SEO optimization.<br>
-                <strong>Target Audience:</strong> Small businesses looking to build an online presence.<br>
-                <strong>Budget:</strong> $800 - $1400<br>
-                <strong>Deadline:</strong> 1 month.
-            </p> <br>
-            <p class="explanation">*If you're not sure, use your own words. We will guide you further.</p>
+  
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="faq-icon">+</span> How can I get in touch with customer support?
+        </button>
+        <div class="faq-answer">
+            <p>You can contact our support team via the contact page or reach out to us directly through WhatsApp at <strong>+1234567890</strong>.</p>
         </div>
     </div>
-    <div class="contact-us-right">
-        <form class="contact-form">
-            <h1>Full Name</h1>
-            <div class="input-field">
-                <input type="text" placeholder="Enter your full name" />
-            </div>
-            <h1>Email Address</h1>
-            <div class="input-field">
-                <input type="email" id="emailInput" placeholder="Enter your email address" />
-            </div>
-            <h1>What do we launch into the online world? </h1>
-            <div class="input-field">
-                <textarea placeholder="Enter your message"></textarea>
-            </div>
-            <div class="input-field checkbox">
-                <input type="checkbox" id="policyCheck" />
-                <label for="policyCheck">I hereby agree to our Privacy Policy terms. </label>
-            </div>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="faq-icon">+</span> How long does it take to build a website?
+        </button>
+        <div class="faq-answer">
+            <p>The timeline depends on the complexity of the project, but most websites take between 1 - 2 weeks to complete, including design, development, and testing phases.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="faq-icon">+</span> Do you provide ongoing website maintenance?
+        </button>
+        <div class="faq-answer">
+            <p>Yes, we have several measuring tools to make sure your website is up and running 99,9% of the time. In case of any issues we will step in immidiately.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="faq-icon">+</span> Can I update my website after it’s built?
+        </button>
+        <div class="faq-answer">
+            <p>Yes, we provide you with tools to change images, text and values of your website. Remember that we will assist you anytime needed.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 6 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="faq-icon">+</span> Do you offer e-commerce website solutions?
+        </button>
+        <div class="faq-answer">
+            <p>Yes, we specialize in building e-commerce websites, including secure payment integrations, inventory management, and user-friendly shopping carts.</p>
+        </div>
     </div>
 </div>
+
+
 <footer class="footer">
     <div class="footer-left">
         <div class="footer-brand">
@@ -132,6 +149,18 @@ window.addEventListener('load', function() {
     }, 0);
 });
 </script>
+
+<script>
+ // Handle the toggling of FAQ answers and icon changes
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+        item.classList.toggle('open');
+    });
+});
+</script>
 <script>
     // Trigger the notification when the Pricing link is clicked
 document.querySelector('a[href="#templates"]').addEventListener('click', function(event) {
@@ -147,11 +176,6 @@ document.querySelector('a[href="#templates"]').addEventListener('click', functio
     }, 5000); // 5 seconds delay
 });
 </script>
-<script>
- function toggleExample() {
-    var exampleDiv = document.getElementById('example-business');
-    exampleDiv.classList.toggle('show'); // Toggle the 'show' class to control visibility
-}
-</script>
+
 </body>
 </html>

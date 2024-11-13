@@ -185,7 +185,9 @@ body::-webkit-scrollbar {
     display: flex;
     
 }
-
+#index {
+    cursor: pointer;
+}
 .nav-links li {
     color: grey; /* Greyish text */
     font-family: '__GeistSans', sans-serif; /* Use Geist Sans */
@@ -209,203 +211,127 @@ body::-webkit-scrollbar {
     align-items: center;
     gap: 15px;
 }
-.contact-us-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background: linear-gradient(to top right, #0a178ffd 0%, #000000 50%, #111111 100%);
-    
-    color: white;
-}
 
-.contact-us-left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20%;
-    padding-right: 20px;
-    padding: 0 10%;
-    
-    
-}
 
-.contact-us-left h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    
-    
-    
-    
-}
 
-.contact-us-left h2 {
-    font-size: 1.2rem;
-    font-family: 'Inter';
-    font-weight: lighter;
+body {
     margin: 0;
-}
-.contact-us-left p {
-    color: #ffffff;
-    display: inline;
-}
-
-.contact-us-left a {
-    color: #1a7bbc;
-    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000000;
+    min-height: 100vh;
 }
 
-.contact-us-right {
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    padding: 0 10%;
-    
-    
+.portfolio {
+    padding: 40px;
+    text-align: center;
 }
 
-.contact-form h1 {
-    font-size: 1rem;
-    margin-bottom: 10px;
+h1 {
     font-family: 'Inter';
-    font-weight: lighter;
-    color: aliceblue;
-}
-
-.input-field {
-    margin-bottom: 15px;
-   
-    
-}
-
-.input-field input,
-.input-field textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 10px;
-    border: 1px solid rgb(24, 24, 24);
-    background-color: #0f0f0f;
+    font-size: 36px;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
-.input-field textarea {
-    resize: vertical;
-    min-height: 150px;
+h2 {
+    font-size: 18px;
+    color: #bebebe;
+    margin-bottom: 20px;
+    font-family: 'Inter';
 }
 
-.checkbox {
+.project {
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-family: 'Inter';
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    position: relative;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide overflowing images */
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for sliding images */
+    width: 100%; /* Ensures that all images fit in the gallery (3 images visible at once) */
+    overflow: hidden;
+}
+
+.gallery-images img {
+    width: 22%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-right: 8px;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05); /* Add hover effect */
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    color: #494949;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-btn.left {
+    left: 10%;
+}
+
+.arrow-btn.right {
+    right: 10%;
+}
+
+.arrow-btn:hover {
+    color: #ccc;
+}
+
+.show-live {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #333;
+}
+
+.show-live:hover {
+    background-color: #333;
     color: #fff;
 }
-#policyCheck {
-    display: flex;
-    align-items: left;
-    width: 5%;
-}
-.checkbox input {
-    margin-right: 10px;
- 
-}
-
-.submit-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #0a178f69;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background-color: #0a178ffd;
-}
-
-@media screen and (max-width: 768px) {
-    .contact-us-container {
-        flex-direction: column;
-    }
-
-    .contact-us-left,
-    .contact-us-right {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .contact-us-left h1 {
-        font-size: 2rem;
-    }
-}
-
-#index {
-    cursor: pointer;
-}
-
-
-/* Initially, the example business description is invisible and doesn't take up space */
-.example-business {
-    visibility: hidden; /* Hide the element without taking up space */
-    height: 0; /* Ensure it takes no space */
-    padding: 0; /* Remove padding to avoid any space taken */
-    margin-top: 0; /* Remove margin to avoid extra space */
-    overflow: hidden; /* Hide any overflowing content */
-    transition: visibility 0s, height 0.7s ease-in-out, padding 0.7s ease-in-out; /* Smooth transition for visibility, height, and padding */
-    background-color: #ffffff0a;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
- 
-}
-
-/* When the example is shown, restore normal visibility and space */
-.example-business.show {
-    visibility: visible; /* Make it visible */
-    height: auto; /* Allow the content to take its normal height */
-    width: auto;
-    padding: 15px; /* Add padding when shown */
-    margin-top: 20px; /* Add margin when shown */
-}
-
-.example-business h3 {
-    font-size: 22px;
-    color: #ffffff;
-}
-
-/* Paragraph styling */
-.example-business p {
-    font-size: 18px; /* Slightly larger text for easier reading */
-    color: #fff; /* White text for contrast */
-    font-family: "Inter", sans-serif;
-    letter-spacing: 0.5px; /* Slightly reduced letter-spacing for better readability */
-    line-height: 1.6; /* Increase line height for better text flow */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow to enhance readability */
-}
-
-/* Optional: Add spacing between paragraphs for better clarity */
-.example-business p + p {
-    margin-top: 10px;
-}
-/* Styling for the explanation text */
-p.explanation {
-    font-size: 14px; /* Adjust font size */
-    color: #acacac; /* Color for the text */
-    font-family: "Inter", sans-serif; /* Font */
-    margin-top: 15px; /* Space above */
-    line-height: 1.6; /* Improve line spacing */
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .pinkp {

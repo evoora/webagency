@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrightSite</title>
-    <link rel="stylesheet" href="stylecontact.css"> <!-- Link to your CSS -->
+    <link rel="stylesheet" href="styleportfolio.css"> <!-- Link to your CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
         <span id="index">BrightSite</span>
         <ul class="nav-links">
             <li><a href="#templates">Pricing</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </div>
@@ -43,49 +43,45 @@
     </div>
 </nav>
 
-<div class="contact-us-container">
-    <div class="contact-us-left">
-        <h1>Let's Get In Touch</h1>
-        <h2>What's the vision for your business online?<br>
-            <p class="disclaimer">If you want to see an example of good input, 
-                <a class="pinkp" href="javascript:void(0);" onclick="toggleExample()">click here.</a>
-            </p>
-        </h2>
-        <div id="example-business" class="example-business" >
-            <h3>For example, you could write: </h3>
-            
-            <p>
-                <strong>Business Name:</strong> ABC Web Design<br>
-                <strong>Services Needed:</strong> Website development, UI/UX design, SEO optimization.<br>
-                <strong>Target Audience:</strong> Small businesses looking to build an online presence.<br>
-                <strong>Budget:</strong> $800 - $1400<br>
-                <strong>Deadline:</strong> 1 month.
-            </p> <br>
-            <p class="explanation">*If you're not sure, use your own words. We will guide you further.</p>
+<div class="portfolio">
+   
+
+    <div class="project">
+        <div class="project-title">Nexora</div>
+        <div class="project-description">An e-commerce platform designed to offer an easy and seamless shopping experience.</div>
+        
+        <div class="image-gallery">
+            <button class="arrow-btn left">&#10094;</button>
+            <div class="gallery-images">
+               
+                <img src="imgs/proactiv-screenshot-1.webp" alt="Project Image 1">
+                <img src="imgs/proactiv-screenshot-2.webp" alt="Project Image 2">
+                <img src="imgs/proactiv-screenshot-3.webp" alt="Project Image 3">
+               
+            </div>
+            <button class="arrow-btn right">&#10095;</button>
         </div>
+        <a href="#" class="show-live">Show Live</a>
     </div>
-    <div class="contact-us-right">
-        <form class="contact-form">
-            <h1>Full Name</h1>
-            <div class="input-field">
-                <input type="text" placeholder="Enter your full name" />
+
+    <div class="project">
+        <div class="project-title">QuantumVibe</div>
+        <div class="project-description">An e-commerce platform designed to offer an easy and seamless shopping experience.</div>
+        
+        <div class="image-gallery">
+            <button class="arrow-btn left">&#10094;</button>
+            <div class="gallery-images">
+                <img src="imgs/startup-1.webp" alt="Project Image 1">
+                <img src="imgs/startup-2.webp" alt="Project Image 2">
+                <img src="imgs/startup-3.webp" alt="Project Image 3">
+               
             </div>
-            <h1>Email Address</h1>
-            <div class="input-field">
-                <input type="email" id="emailInput" placeholder="Enter your email address" />
-            </div>
-            <h1>What do we launch into the online world? </h1>
-            <div class="input-field">
-                <textarea placeholder="Enter your message"></textarea>
-            </div>
-            <div class="input-field checkbox">
-                <input type="checkbox" id="policyCheck" />
-                <label for="policyCheck">I hereby agree to our Privacy Policy terms. </label>
-            </div>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
+            <button class="arrow-btn right">&#10095;</button>
+        </div>
+        <a href="#" class="show-live">Show Live</a>
     </div>
 </div>
+    
 <footer class="footer">
     <div class="footer-left">
         <div class="footer-brand">
@@ -132,8 +128,39 @@ window.addEventListener('load', function() {
     }, 0);
 });
 </script>
+
 <script>
-    // Trigger the notification when the Pricing link is clicked
+  document.addEventListener('DOMContentLoaded', function () {
+    const leftArrows = document.querySelectorAll('.arrow-btn.left');
+    const rightArrows = document.querySelectorAll('.arrow-btn.right');
+    
+    leftArrows.forEach((arrow) => {
+        arrow.addEventListener('click', function () {
+            const gallery = arrow.closest('.image-gallery').querySelector('.gallery-images');
+            const currentTranslate = parseInt(gallery.style.transform.replace('translateX(', '').replace('px)', '') || 0);
+            const newOffset = currentTranslate + gallery.clientWidth; // Move images back to the right
+
+            gallery.style.transform = `translateX(${Math.min(newOffset, 0)}px)`; // Ensure images don't go past the beginning
+        });
+    });
+    
+    rightArrows.forEach((arrow) => {
+        arrow.addEventListener('click', function () {
+            const gallery = arrow.closest('.image-gallery').querySelector('.gallery-images');
+            const galleryWidth = gallery.scrollWidth;
+            const visibleWidth = gallery.clientWidth;
+            const maxOffset = galleryWidth - visibleWidth;
+
+            const currentTranslate = parseInt(gallery.style.transform.replace('translateX(', '').replace('px)', '') || 0);
+            const newOffset = Math.max(currentTranslate - visibleWidth, -maxOffset);
+
+            gallery.style.transform = `translateX(${newOffset}px)`; // Move images left
+        });
+    });
+});
+</script>
+<script>
+        // Trigger the notification when the Pricing link is clicked
 document.querySelector('a[href="#templates"]').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default link behavior (scrolling to #templates)
 
@@ -146,12 +173,6 @@ document.querySelector('a[href="#templates"]').addEventListener('click', functio
         notification.classList.remove('visible');
     }, 5000); // 5 seconds delay
 });
-</script>
-<script>
- function toggleExample() {
-    var exampleDiv = document.getElementById('example-business');
-    exampleDiv.classList.toggle('show'); // Toggle the 'show' class to control visibility
-}
 </script>
 </body>
 </html>
