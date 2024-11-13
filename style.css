@@ -395,7 +395,7 @@ body::-webkit-scrollbar {
 
 .right-side {
     flex: 1;
-    background-color: hsla(0, 0%, 100%, 0.042); /* Background color for card */
+    background-color: hsla(0, 0%, 100%, 0); /* Background color for card */
     border: 0.1px solid rgba(255, 255, 255, 0.014);
     color: #ffffff; /* Text color */
     padding: 20px;
